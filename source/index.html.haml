@@ -12,14 +12,17 @@ body_class: index
     %li.email
       / TODO: Tooltip with email
       %a(href='mailto:marc.bodmer@gmail.com')Email
+    %li.blog
+      / TODO: Tooltip with email
+      %a(href='http://blog.mbodmer.com')Blog
 
 %section.intro
   %h2 Intro
   %article
     / Hi, I'm Marc. I am a full stack software developer living in the beautiful city of Toronto(Link to map).
     / I love creating great software that is easy and fun to use. I love open source and how it shows off developers willing to come together and create software for the better.
-    / I also enjoy teaching about software and give back to the community. I have written a book on Ember.js, give talks at local technology meetups(link to talk) and mentor for Ladies Learning Code(link to Ladies Learning Code site).
-    / In my spare time, you can find me rock climbing, eating food and listening to music genres you have never heard of.
+    / I also enjoy teaching about software and give back to the community. I have written a book, write posts on various technologies, give talks at local technology meetups(link to talk) and mentor for Ladies Learning Code(link to Ladies Learning Code site).
+    / In my spare time, you can find me rock climbing, travelling and eating food.
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -27,25 +30,34 @@ body_class: index
 %section.work
   %h2 My Work
   .items
-    .item
-      .image
+    .item.five-hundred
+      .image(src='http://placehold.it/350x450')
       .details
         %h3 My Company
         %h4 Ruby on Rails, JavaScript, Backbone
-        %p This is a description of the company.
-    / 500px
+        %p This is a description of the company and the projects that I worked on in the company.
+    .item.confabulation
+      .image(src='http://placehold.it/350x450')
+      .details
+        %h3 My Company 2
+        %h4 Ruby on Rails, JavaScript, Angular
+        %p This is a description of the company and the projects that I worked on in the company.
+    .item.red-flag
+      .image(src='http://placehold.it/350x450')
+      .details
+        %h3 My Company 3
+        %h4 PHP, JavaScript
+        %p This is a description of the company and the projects that I worked on in the company.
+    / Small thumbnail that expands to big thumbnail on hover/click
+    / 500px - The Premier Photography Community
     / Images of
-    / Profile, Photo Page, Homepage
+    / Profile page, Photo Page, Homepage
     / Ruby on Rails, JavaScript, Backbone
     / Confabulation
     / Images of stuff
-    / Ruby on Rails, JavaScript, Angular
-    / Blog
-    / Images of main blog page and blog post page
-    / Ghost, JavaScript
 
 %footer
-  .copyright Copyright
+  .copyright Made with 100% organic code
   %ul.social-list
     %li.twitter
       %a(href='http://twitter.com/marcbodmer')Twitter
