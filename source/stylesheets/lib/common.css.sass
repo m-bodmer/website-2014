@@ -6,8 +6,12 @@ body
 h1
   font-size: 36px
   display: inline-block
+
 h2
   font-size: 32px
+
+h1, h2, h3, h4, p, a
+  font-family: 'Myriad Pro Light'
 
 a
   text-decoration: none
@@ -53,10 +57,12 @@ section.work
   width: 100%
 
   .item
-    margin-bottom: 80px
+    // margin-bottom: 80px
     padding: 50px
     .image
       height: 20px
+      width: 600px
+      margin: 0 auto
       -webkit-box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
       -moz-box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
       box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
@@ -66,24 +72,23 @@ section.work
       h3
         line-height: 1
         font-size: 42px
+        margin-bottom: 10px
       h4
         font-weight: normal
         font-size: 14px
       p
         font-size: 18px
     &.five-hundred
-      background-color: black
-      color: white
+      background-color: #222222
+      color: #FFF
       .image
         height: 50px
     &.confabulation
-      background-color: #50BED9
-      color: white
+      background-color: #002D56
+      color: #FFF
     &.red-flag
-      background-color: red
-      color: white
-
-
+      background-color: #CB0000
+      color: #FFF
 
 footer
   width: 640px
@@ -91,5 +96,6 @@ footer
   margin: 0 auto
   .copyright
     float: left
+    font-size: 12px
   ul.social-list
     float: right
