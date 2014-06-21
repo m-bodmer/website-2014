@@ -9,6 +9,8 @@ h1
 
 h2
   font-size: 32px
+  letter-spacing: 2px
+  color: #CBD0D5
 
 h1, h2, h3, h4, p, a
   font-family: 'Myriad Pro Light'
@@ -42,11 +44,13 @@ header
 
 section
   width: 640px
-  margin: 0 auto
+  margin: 0 auto 50px auto
   h2
     text-align: center
     text-transform: uppercase
     font-weight: 400
+body section:last-of-type
+  margin-bottom: 0
 
 article
   line-height: 1.5
@@ -75,9 +79,12 @@ section.work
         margin-bottom: 10px
       h4
         font-weight: normal
-        font-size: 14px
+        font-size: 15px
       p
         font-size: 18px
+        margin: 30px auto 0 auto
+        width: 600px
+        line-height: 1.6
     &.five-hundred
       background-color: #222222
       color: #FFF
@@ -92,10 +99,14 @@ section.work
 
 footer
   width: 640px
-  padding: 20px
+  padding: 28px
   margin: 0 auto
+  overflow: hidden
+  p
+    margin: 0
   .copyright
     float: left
     font-size: 12px
+    margin-top: 3px
   ul.social-list
     float: right
