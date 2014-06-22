@@ -1,4 +1,7 @@
 @import "variables", "mixins", "fonts"
+*
+  box-sizing: border-box
+
 body
   background-color: $background
   color: $font-color
@@ -19,7 +22,7 @@ a
   text-decoration: none
   color: $font-color
   &:hover
-    color: red
+    color: #d04c3f
 
 ul
   list-style-type: none
@@ -40,7 +43,7 @@ header
     float: left
   ul
     float: right
-    margin-top: 35px
+    margin: 35px 3px 0 0
 
 section
   width: 640px
@@ -49,6 +52,7 @@ section
     text-align: center
     text-transform: uppercase
     font-weight: 400
+
 body section:last-of-type
   margin-bottom: 0
 
@@ -57,15 +61,58 @@ article
   font-size: 1.5rem
   text-align: justify
 
+// Styles for braces animation
+header
+  position: relative
+  z-index: 1
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  a
+    outline: none
+    white-space: nowrap
+    position: relative
+    display: inline-block
+    vertical-align: bottom
+    &::before, &::after
+      pointer-events: none
+      backface-visibility: hidden
+
+header
+  a
+    padding: 0 0.25em
+    transition: color 0.2s
+    -webkit-transition: color 0.2s
+    &::before, &::after
+      position: absolute
+      top: 0
+      line-height: 1
+      font-size: 110%
+      opacity: 0
+      -webkit-transition: opacity 0.2s, -webkit-transform 0.2s
+      transition: opacity 0.2s, transform 0.2s
+    &::before
+      left: -0.1em
+      content: '['
+      -webkit-transform: translateX(-100%)
+      transform: translateX(-100%)
+    &::after
+      right: -0.1em
+      content: ']'
+      -webkit-transform: translateX(100%)
+      transform: translateX(100%)
+    &:hover::before, &:hover::after
+      opacity: 1
+      -webkit-transform: translateX(0)
+      transform: translateX(0)
+
+
 section.work
   width: 100%
 
   .item
     // margin-bottom: 80px
-    padding: 50px
+    padding: 110px
     img
-      // height: 20px
-      // width: 600px
       margin: 0 auto
       display: block
       // -webkit-box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
@@ -81,22 +128,40 @@ section.work
       h4
         font-weight: normal
         font-size: 15px
+        text-transform: uppercase
       p
         font-size: 18px
+        text-align: left
         margin: 30px auto 0 auto
         width: 600px
         line-height: 1.6
     &.five-hundred
       background-color: #222222
       color: #FFF
+      .images
+        margin: 0 auto
+        width: 805px
       img.inline
         display: inline-block
+      img:nth-child(1)
+        width: 320px
+        max-width: 320px
+      img:nth-child(2)
+        margin-top: 10px
+        width: 480px
+        max-width: 480px
     &.confabulation
       background-color: #002D56
       color: #FFF
+      img
+        width: 390px
+        max-width: 390px
     &.red-flag
       background-color: #CB0000
       color: #FFF
+      img
+        width: 440px
+        max-width: 440px
 
 footer
   width: 640px
@@ -111,3 +176,43 @@ footer
     margin-top: 3px
   ul.social-list
     float: right
+
+@media screen and (max-width: $break-large) and (min-width: $break-small)
+  header
+    padding: 20px
+    width: 100%
+    h1
+      float: none
+    ul.social-list
+      display: block
+      float: none
+      margin: 35px auto 0 auto
+      width: 240px
+  footer
+    width: 100%
+  section
+    width: 100%
+  section.intro
+    article
+      font-size: 1.3rem
+    p
+      padding: 0 20px
+  section.work
+    .item
+      .images
+        width: 100%
+        padding: 0 20px
+      &.confabulation, &.red-flag
+        img
+          width: 100%
+          height: auto
+      &.five-hundred
+        .images
+          width: 100%
+        img.inline
+          width: 100%
+          display: block
+        img:nth-child(2)
+          margin-top: 20px
+    .item .details p
+      width: 100%
