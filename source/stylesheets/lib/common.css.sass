@@ -16,7 +16,7 @@ h2
   color: #CBD0D5
 
 h1, h2, h3, h4, p, a
-  font-family: 'Myriad Pro Light'
+  font-family: 'MuseoSansLight'
 
 a
   text-decoration: none
@@ -39,26 +39,25 @@ header
   margin: 0 auto
   width: 640px
   overflow: hidden
-  h1
-    float: left
+  text-align: center
   ul
-    float: right
-    margin: 35px 3px 0 0
+    margin: 35px auto 0 auto
 
 section
   width: 640px
   margin: 0 auto 50px auto
-  h2
+  h1
     text-align: center
-    text-transform: uppercase
-    font-weight: 400
 
 body section:last-of-type
   margin-bottom: 0
 
 section.intro
+  text-align: center
   b
-    font-family: 'Myriad Pro Regular'
+    font-family: 'MuseoSansRegular'
+  h1
+    padding-top: 28px
 
 article
   line-height: 1.5
@@ -139,9 +138,12 @@ section.work
         margin: 30px auto 0 auto
         width: 600px
         line-height: 1.6
+    &.teehan-lax
+      background-color: #3EA5CE
+      color: #FCFCFC
     &.five-hundred
       background-color: #222222
-      color: #FFF
+      color: #FCFCFC
       .images
         margin: 0 auto
         width: 805px
@@ -156,13 +158,13 @@ section.work
         max-width: 480px
     &.confabulation
       background-color: #002D56
-      color: #FFF
+      color: #FCFCFC
       img
         width: 390px
         max-width: 390px
     &.red-flag
       background-color: #CB0000
-      color: #FFF
+      color: #FCFCFC
       img
         width: 440px
         max-width: 440px
@@ -185,14 +187,14 @@ footer
   header
     padding: 20px
     width: 100%
-    h1
-      float: none
     ul.social-list
       display: block
       float: none
       margin: 35px auto 0 auto
       width: 353px
       font-size: 25px
+      li
+        margin-bottom: 15px
   footer
     width: 100%
   section

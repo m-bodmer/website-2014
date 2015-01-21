@@ -3,21 +3,20 @@ title: Marc Bodmer
 body_class: index
 ---
 %header
-  %h1 Marc Bodmer
   %ul.social-list
+    %li.work
+      %a(href='#work')Work
     %li.twitter
       %a(href='http://twitter.com/marcbodmer')Twitter
     %li.github
       %a(href='http://github.com/m-bodmer')Github
     %li.email
-      / TODO: Tooltip with email
       %a(href='mailto:marc.bodmer@gmail.com')Email
     %li.blog
-      / TODO: Tooltip with email
       %a(href='http://blog.mbodmer.com')Blog
 
 %section.intro
-  %h2 About
+  %h1 Marc Bodmer
   %article
     %p<
       Hi, I'm Marc. I am a software developer working in the beautiful city of
@@ -39,9 +38,17 @@ body_class: index
         %b mentor for Ladies Learning Code.
       In my spare time, you can find me rock climbing, travelling and eating all types of food.
 
-%section.work
-  %h2 Products I've Worked On
+%section#work.work
   .items
+    .item.teehan-lax
+      .details
+        %h3 Teehan+Lax
+        %h4 Node.JS • JavaScript • Ember
+      .images
+        %img.inline(src='images/tl1.png')
+        %img.inline(src='images/tl2.png')
+      .details
+        %p Teehan+Lax, one of the most influential design agencies in the world.
     .item.five-hundred
       .details
         %h3 500px
@@ -51,13 +58,6 @@ body_class: index
         %img.inline(src='images/500px2.png')
       .details
         %p 500px is a photo community for discovering, sharing, buying and selling inspiring photography powered by creative people worldwide.
-    .item.confabulation
-      .details
-        %h3 Confabulation
-        %h4 Ruby on Rails • JavaScript • Angular
-      %img(src='images/confabulation.png')
-      .details
-        %p A conference application to plan conferences with, as well as provide a mobile friendly information portal for conference attendees.
     .item.red-flag
       .details
         %h3 RedFlagDeals
@@ -75,5 +75,4 @@ body_class: index
     %li.github
       %a(href='http://github.com/m-bodmer')Github
     %li.email
-      / TODO: Tooltip with email
       %a(href='mailto:marc.bodmer@gmail.com')Email
