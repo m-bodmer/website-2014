@@ -118,6 +118,7 @@ section.work
     img
       margin: 0 auto
       display: block
+      width: 100%
       // -webkit-box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
       // -moz-box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
       // box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
@@ -144,24 +145,6 @@ section.work
     &.five-hundred
       background-color: #222222
       color: #FCFCFC
-      .images
-        margin: 0 auto
-        width: 805px
-      img.inline
-        display: inline-block
-      img:nth-child(1)
-        width: 320px
-        max-width: 320px
-      img:nth-child(2)
-        margin-top: 10px
-        width: 480px
-        max-width: 480px
-    &.confabulation
-      background-color: #002D56
-      color: #FCFCFC
-      img
-        width: 390px
-        max-width: 390px
     &.red-flag
       background-color: #CB0000
       color: #FCFCFC
@@ -207,20 +190,11 @@ footer
   section.work
     .item
       padding: 50px
-      .images
-        width: 100%
+      img
         padding: 0 20px
-      &.confabulation, &.red-flag
+      &.red-flag
         img
           width: 100%
           height: auto
-      &.five-hundred
-        .images
-          width: 100%
-        img.inline
-          width: 100%
-          display: block
-        img:nth-child(2)
-          margin-top: 20px
     .item .details p
       width: 100%
