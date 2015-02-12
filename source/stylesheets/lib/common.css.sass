@@ -86,29 +86,21 @@ header
     padding: 0 0.25em
     transition: color 0.2s
     -webkit-transition: color 0.2s
-    &::before, &::after
-      position: absolute
-      top: 0
-      line-height: 1
-      font-size: 110%
-      opacity: 0
-      -webkit-transition: opacity 0.2s, -webkit-transform 0.2s
-      transition: opacity 0.2s, transform 0.2s
-    &::before
-      left: -0.1em
-      content: '['
-      -webkit-transform: translateX(-100%)
-      transform: translateX(-100%)
-    &::after
-      right: -0.1em
-      content: ']'
-      -webkit-transform: translateX(100%)
-      transform: translateX(100%)
-    &:hover::before, &:hover::after
-      opacity: 1
-      -webkit-transform: translateX(0)
-      transform: translateX(0)
-
+    &:after
+      clear: both
+      display: block
+      content: ""
+      position: relative
+      width: 0
+      left: 50%
+      height: 2px
+      background: #d04c3f
+      +transition(width .2s ease, left .2s ease)
+      border-radius: 6px
+    &:hover, &:focus
+      &:after
+        width: 100%
+        left: 0
 
 section.work
   width: 100%
@@ -119,9 +111,6 @@ section.work
       display: block
       width: 100%
       max-width: 1000px
-      // -webkit-box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
-      // -moz-box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
-      // box-shadow: 0 0 0 1px #cbd0d5,0 2px 24px rgba(0,0,0,0.1)
     .details
       width: 100%
       text-align: center
